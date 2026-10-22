@@ -12,7 +12,13 @@ Muse (my personal AI agent) later finished the model: wrote `models/rawaj_scorin
 On the model side there was nothing to correct: the checker reported exactly the 11 coverage gaps and 2 policy findings the task spec predicts on the starter model, and after adding the 12 threats it reports zero findings — confirmed by running the CLI, not by assumption.
 
 ## In my own words
-<!-- Write these two answers yourself, without AI. One or two sentences each. -->
+
 1. Why does a data store have no Spoofing threats in STRIDE per element, and where does that threat go instead?
 
+For "spoofing" to occur, the entity must be the one to initiate a connection while asserting its identity. This is not possible for a data store, as it is a passive element that merely receives requests and data; it never initiates any connections.
+
+Therefore, this threat is attributed to the computer system (process) that initiates the connection and requests to interact with the data, rather than to the data store itself.
+
 2. Which of my eleven new threats would I fix first, and why that one?
+
+I will fix T30 first, because any analyst can see the full PII, which exposes the data of customers with open cases.
